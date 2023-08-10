@@ -54,7 +54,6 @@
                         </li>
                     </ul>
                     <!-- End -->
-
                     <input type="hidden" id="payment_method_id" name="payment_method_id" value="">
 
                     <!-- Credit card form content -->
@@ -129,13 +128,13 @@
     </div>
 
 
-    <div class="container mt-5">
+    <div class="container mt-5 step-content active" id="step1">
         <div class="row">
             <div class="col-md-8 offset-md-2 mt-4">
                 <div class="card">
                     <div class="card-body">
                         <form id="formCustomerStore">
-                            <div class="step-content active" id="step1">
+                            <div>
                                 <h6>Cadastro do Pagador</h6>
                                 <div class="form-group">
                                     <label for="name">Name:</label>
@@ -168,8 +167,19 @@
                             </div>
                         </form>
 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-                        <div class="step-content" id="step3">
+
+    <div class="container mt-5 step-content" id="step3">
+        <div class="row">
+            <div class="col-md-8 offset-md-2 mt-4">
+                <div class="card">
+                    <div class="card-body">
+                    <div>
                             <h6 style="text-align: center">Obrigado!</h6>
                             <div class="alert alert-success">
                                 <i class="fas fa-check-circle"></i> Pagamento Enviado com sucesso!
