@@ -55,6 +55,7 @@
                     </ul>
                     <!-- End -->
 
+                    <input type="hidden" id="payment_method_id" name="payment_method_id" value="">
 
                     <!-- Credit card form content -->
                     <div class="tab-content">
@@ -217,6 +218,8 @@
 
             const tabLinks = document.querySelectorAll('.nav-link[data-toggle="pill"]');
             const paymentMethodIdInput = document.getElementById('payment_method_id');
+            const defaultPaymentMethod = '3';
+            paymentMethodIdInput.value = defaultPaymentMethod;
 
             tabLinks.forEach(function(tabLink) {
                 tabLink.addEventListener('click', function(event) {
@@ -478,6 +481,7 @@
             $('#payment_method_id').on('change', showCreditCardFields);
 
             formCustomerStore.on('submit', sendFormCustomer);
+
             formCreditCardStore.on('submit', function(event) {
                 sendFormTransaction(event, formCreditCardStore);
             });
